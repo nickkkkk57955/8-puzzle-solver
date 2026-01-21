@@ -11,7 +11,7 @@ Game.Actions = {
 };
 
 
-Game.DesiredState = '123456780';
+Game.DesiredState = '123804765';
 
 
 Game.prototype.getAvaliableActionsAndStates = function() {
@@ -107,15 +107,15 @@ Game.prototype.getManhattanDistance = function() {
 
     var fourIndex = this.state.indexOf('4');
     var fourPosition = Game.indexToRowColumn(fourIndex);
-    distance += Math.abs(1 - fourPosition.row) + Math.abs(0 - fourPosition.column);
+    distance += Math.abs(1 - fourPosition.row) + Math.abs(2 - fourPosition.column);
 
     var fiveIndex = this.state.indexOf('5');
     var fivePosition = Game.indexToRowColumn(fiveIndex);
-    distance += Math.abs(1 - fivePosition.row) + Math.abs(1 - fivePosition.column);
+    distance += Math.abs(2 - fivePosition.row) + Math.abs(2 - fivePosition.column);
 
     var sixIndex = this.state.indexOf('6');
     var sixPosition = Game.indexToRowColumn(sixIndex);
-    distance += Math.abs(1 - sixPosition.row) + Math.abs(2 - sixPosition.column);
+    distance += Math.abs(2 - sixPosition.row) + Math.abs(1 - sixPosition.column);
 
     var sevenIndex = this.state.indexOf('7');
     var sevenPosition = Game.indexToRowColumn(sevenIndex);
@@ -123,7 +123,7 @@ Game.prototype.getManhattanDistance = function() {
 
     var eightIndex = this.state.indexOf('8');
     var eightPosition = Game.indexToRowColumn(eightIndex);
-    distance += Math.abs(2 - eightPosition.row) + Math.abs(1 - eightPosition.column);
+    distance += Math.abs(1 - eightPosition.row) + Math.abs(0 - eightPosition.column);
 
     return distance;
 };
